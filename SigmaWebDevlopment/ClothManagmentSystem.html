@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clothing Store</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container" style="display: flex; align-items: center; flex-direction: column; justify-content: center;">
+        <h1>Clothing Store Dashboard</h1>
+        <div id="dashboard">
+            <h2>Login</h2>
+            <label for="role">Are you a Customer or Admin?</label>
+            <select id="role">
+                <option value="customer">Customer</option>
+                <option value="admin">Admin</option>
+            </select>
+            <button onclick="dashboard()">Submit</button>
+        </div>
+
+        <div id="adminlogin" class="hidden">
+            <h2>Admin Authentication</h2>
+            <label for="adminId">Admin ID:</label>
+            <input type="text" id="adminId">
+            <label for="adminPass">Password:</label>
+            <input type="password" id="adminPass">
+            <button onclick="authenticate()">Login</button>
+        </div>
+
+        <div id="adminDashboard" class="hidden">
+            <h2>Admin Dashboard</h2>
+            <button onclick="openAddMenu()">Add Clothes to Menu</button>
+            <button onclick="logout()">Logout</button>
+        </div>
+
+        <div id="addMenu" class="hidden">
+            <h2>Add Clothes</h2>
+            <label for="clothname">Cloth Name:</label>
+            <input type="text" id="clothname">
+            <label for="clothprice">Price:</label>
+            <input type="number" id="clothprice">
+            <button onclick="addCloth()">Add</button>
+            <!-- <button onclick="">Done</button> -->
+        </div>
+
+        <div id="customerMenu" class="hidden">
+            <h2>Available Clothes</h2>
+            <div id="menuData"></div>
+            <!-- <button onclick="">Buy Clothes</button> -->
+        </div>
+
+        <div id="buyCloths" class="hidden">
+            <h2>Buy Clothes</h2>
+            <label for="buyclothname">Enter Cloth Name:</label>
+            <input type="text" id="buyclothname">
+            <label for="buyclothcount">Enter Quantity:</label>
+            <input type="number" id="buyclothcount">
+            <button onclick="buyCloth()">Add to Cart</button>
+            <!-- <button onclick="generateBill()">Checkout</button> -->
+        </div>
+
+        <div id="bill" class="hidden">
+            <h2>Bill</h2>
+            <p id="billdetails"></p>
+            <button onclick="restart()">Bill</button>
+        </div>
+    </div>
+    <!-- <script src="ClothManagmentSystem.js"></script> -->
+</body>
+</html>
