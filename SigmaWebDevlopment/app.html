@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Half-Circle Diagram</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #dfffd8; /* Light green background */
+            font-family: Arial, sans-serif;
+        }
+
+        .diagram {
+            position: relative;
+            width: 300px;
+            height: 150px;
+        }
+
+        /* Half-circle */
+        .half-circle {
+            width: 100%;
+            height: 100%;
+            border: 2px solid green;
+            border-bottom: none;
+            border-radius: 150px 150px 0 0;
+            position: relative;
+            rotate:300px;
+        }
+
+        /* Vertical Line */
+        .vertical-line {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            height: 100%;
+            width: 2px;
+            background-color: black;
+            transform: translateX(-50%);
+        }
+
+        /* Red dot (centroid) */
+        .centroid {
+            position: absolute;
+            left: 50%;
+            top: 33%;
+            width: 10px;
+            height: 10px;
+            background-color: red;
+            border-radius: 50%;
+            transform: translate(-1%, -50%);
+        }
+
+        /* Labels */
+        .label-a,
+        .label-b,
+        .label-o,
+        .label-c {
+            position: absolute;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .label-a {
+            bottom: -20px;
+            left: 0;
+        }
+
+        .label-b {
+            bottom: -20px;
+            right: 0;
+        }
+
+        .label-o {
+            bottom: -20px;
+            left: 50%;
+            transform: translateX(-5%);
+        }
+
+        .label-c {
+            top: 33%;
+            left: 60%;
+            transform: translateY(-5%);
+        }
+
+        /* Caption */
+        .caption {
+            text-align: center;
+            margin-top: 10px;
+            font-style: italic;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="diagram">
+        <div class="half-circle"></div>
+        <div class="vertical-line"></div>
+        <div class="centroid"></div>
+        <div class="label-a">A</div>
+        <div class="label-b">B</div>
+        <div class="label-o">O</div>
+        <div class="label-c">C</div>
+    </div>
+    <div class="caption">C = Centroid</div>
+</body>
+</html>
+
+</body>
+</html>

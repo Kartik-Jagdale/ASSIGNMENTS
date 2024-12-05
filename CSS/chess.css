@@ -1,0 +1,36 @@
+.board {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 20px auto;
+    border: 2px solid #333;
+    width: 8in;
+  }
+  
+  /* .row {
+    display: flex;
+  } */
+  
+  .square {
+    width: 1in;
+    height: 1in;
+  }
+  
+  
+ .square:nth-child(even) {
+    background-color: black; 
+  }
+  
+ 
+ .square:nth-child(odd) {
+    background-color: white; 
+  }
+  
+
+  /* .evenRow {
+    background-color: black;
+  }
+
+  .oddRow{
+    background-color: white;
+  } */

@@ -1,0 +1,25 @@
+.chess-board {
+    /* display: grid;
+    grid-template-columns: repeat(8, 1in);
+    grid-template-rows: repeat(8, 1in); */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 8in;
+    height: 8in;
+    border: 2px solid #000;
+  }
+  
+  .square {
+    width: 1in;
+    height: 1in;
+  }
+  
+  .square.white {
+    background-color: black;
+  }
+  
+  .square.black {
+    background-color: white;
+  }
+  

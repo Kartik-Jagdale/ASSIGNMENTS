@@ -2,7 +2,7 @@
 
 let obj = {};
 let store = {};
-let totalAmount;
+let totalAmount=0.0;
 
 dashboard();
 
@@ -80,11 +80,12 @@ function adminDshboard() {
 
 function bill() {
 
+   console.log(store)
+   console.log(obj)
     for (const key in store) {
-        if (store[key] != obj[key]) null;
-        else{
+            if(key in store && key in obj)
             totalAmount = totalAmount + (obj[key] * store[key]);
-        }
+        
     }
 
     alert("TotalAmount of bill to be paid = " + totalAmount);
