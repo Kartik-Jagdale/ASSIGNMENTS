@@ -9,7 +9,7 @@ const Board = () => {
         const color = (i + j) % 2 === 0;
         squares.push(
           <div
-            // key={`${i} - ${i}`}
+            key={`${i}${j}`}
             className={`square ${color ? "white" : "black"}`}
           />
         );
